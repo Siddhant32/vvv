@@ -1,0 +1,219 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(25deg, #006078, #ffffff); /* Gradient Background */
+    color: #fff;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-size: 200% 200%;
+    animation: gradient 2s ease infinite;
+  }
+  
+  /* Gradient Animation */
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Fade-in for Header */
+  .fade-in {
+    animation: fadeIn 2s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Container */
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Header */
+  header {
+    background-color: #82bac4;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px #006078;
+    margin-bottom: 50px;
+  }
+  
+  header h1 {
+    font-size: 15px;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 15px;
+    color: #006078;
+    text-shadow: 0 0px 50px #006078;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  
+  header p {
+    font-size: 22px;
+    font-weight: 300;
+    color:#006078;
+    text-shadow: 0 0px 50px #006078;
+  }
+  
+  /* Slideshow */
+  .slideshow-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 70px #006078;
+  }
+  
+  .mySlides {
+    display: none;
+    animation: zoomIn 5s ease-in-out;
+  }
+  
+  .mySlides img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    transition: opacity 5s ease-in-out;
+  }
+  
+  /* Slide-in Zoom Animation */
+  @keyframes zoomIn {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .text {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.6);
+    letter-spacing: 2px;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 10px 25px;
+    text-shadow: 0 0px 50px #ffffff;
+    border-radius: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    animation: bounceIn 1s ease;
+  }
+  
+  /* Bounce-in Animation for Text */
+  @keyframes bounceIn {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    60% {
+      transform: translateY(-10px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Button Container */
+  .button-container {
+    margin-top: 30px;
+  }
+  
+  .btn {
+    background-color: #82bac4;
+    color: #006078;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 50px;
+    transition: background-color 0.5s ease;
+    display: inline-block;
+    box-shadow: 0 20px 80px #006078;
+  }
+  
+  /* Hover Effect for Button */
+  .btn:hover {
+    background-color: #82bac4;
+    box-shadow: 0 4px 20px #ffffffd4;
+  }
+  
+  /* Scale-up Effect for Button */
+  .scale-up {
+    animation: scaleUp 0.5s ease-in-out infinite alternate;
+  }
+  
+  @keyframes scaleUp {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+  
+  /* Footer */
+  footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 36px;
+    }
+  
+    .text {
+      font-size: 24px;
+    }
+  
+    .btn {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  }
+  
